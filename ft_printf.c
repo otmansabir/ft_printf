@@ -48,6 +48,8 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] == '%')
 		{
+			if (s[i] == '\0')
+				break ;
 			i++;
 			j += ft_printf2(s[i], args, j);
 		}
